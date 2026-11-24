@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dersleri</title>
+    <link rel="icon" type="image/jpeg" href="mascot/mascot.jpg">
+    <!-- Google Fonts: Press Start 2P & VT323 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            /* Three main colors picked from the Iznik tile cover image */
+            --bg-color: #f4f1ea;          /* Ceramic tile cream / ivory background */
+            --heading-color: #1b3b6f;     /* Iznik deep cobalt blue for headings */
+            --button-bg: #b83b24;         /* Iznik floral terracotta / coral red for buttons */
+            --button-color: #ffffff;      /* High contrast white text for buttons */
+
+            --card-bg: #ffffff;           /* Clean ceramic tile card background */
+            --text-color: #1b3b6f;        /* Deep blue text for high contrast (9.79:1) */
+            --accent-color: #f4f1ea;      /* Cream accent */
+            --button-hover-bg: #1b3b6f;   /* Deep blue button hover */
+            --button-hover-color: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border-radius: 0 !important;  /* No rounded corners */
+            box-shadow: none !important;   /* No shadows */
+            text-shadow: none !important;  /* No shadows */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: none !important; /* No gradients */
+            color: var(--text-color);
+            font-family: 'VT323', monospace;
+            font-size: 22px;
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 0 40px 0;
+            width: 100%;
+        }
+
+        .cover-image {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        header, main, footer {
+            width: 100%;
+            max-width: 800px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px 10px 20px;
+        }
+
+        .header-heading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .header-heading h1 {
+            margin-bottom: 0;
+        }
+
+        .mascot {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Press Start 2P', monospace;
+            color: var(--heading-color);
+            line-height: 1.6;
+        }
+
+        header h1 {
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+            color: var(--heading-color);
+        }
+
+        header p {
+            font-size: 1.4rem;
+            color: var(--text-color);
+        }
+
+        /* Button styles using the palette */
+        button, .btn, input[type="button"], input[type="submit"] {
+            background-color: var(--button-bg);
+            color: var(--button-color);
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.85rem;
+            padding: 12px 20px;
+            border: 2px solid var(--heading-color);
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.15s ease, color 0.15s ease;
+        }
+
+        button:hover, button:focus,
+        .btn:hover, .btn:focus,
+        input[type="button"]:hover, input[type="button"]:focus,
+        input[type="submit"]:hover, input[type="submit"]:focus {
+            background-color: var(--button-hover-bg);
+            color: var(--button-hover-color);
+        }
+
+        .ascii-divider {
+            width: 100%;
+            max-width: 800px;
+            font-family: 'VT323', monospace;
+            color: var(--text-color);
+            text-align: center;
+            font-size: 22px;
+            letter-spacing: 2px;
+            margin: 20px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            user-select: none;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .card-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            background-image: none !important;
+            border: 2px dashed var(--heading-color); /* 2-pixel dashed borders on boxes */
+            padding: 24px;
+            text-decoration: none;
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+        }
+
+        .card:hover, .card:focus {
+            background-color: var(--heading-color);
+            border-color: var(--button-bg);
+            color: var(--accent-color);
+        }
+
+        .card h2 {
+            font-size: 1rem;
+            color: var(--heading-color);
+        }
+
+        .card:hover h2 {
+            color: var(--accent-color);
+        }
+
+        .card p {
+            font-size: 1.3rem;
+            color: var(--text-color);
+        }
+
+        .card:hover p {
+            color: var(--accent-color);
+        }
+
+        .card-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+
+        .my-interests {
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            margin-bottom: 24px;
+            text-align: center;
+            color: var(--heading-color);
+        }
+
+        /* Scroll video support if present */
+        video {
+            max-width: 100%;
+            height: auto;
+            border: 2px dashed var(--heading-color);
+            display: block;
+        }
+
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 20px 0;
+            color: var(--text-color);
+        }
+
+        footer p {
+            color: var(--text-color);
+            font-size: 1.2rem;
+        }
+
+        .ai-note {
+            margin-top: 8px;
+        }
+
+        .ai-note small {
+            font-size: 1rem;
+            opacity: 0.85;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1rem;
+            }
+            .mascot {
+                width: 36px;
+                height: 36px;
+            }
+            .card h2 {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="mascot/cover.jpg" alt="A panoramic Turkish Iznik tile art mural featuring a smiling cactus mascot overlooking a landscape with traditional musicians, artisans weaving carpets, and painters" class="cover-image cover">
+
+    <header>
+        <div class="header-heading">
+            <img src="mascot/mascot.jpg" alt="A cute smiling cactus mascot decorated with traditional Turkish Iznik blue and red floral tile motifs" class="mascot">
+            <h1>hi everyone</h1>
+        </div>
+    </header>
+
+    <div class="ascii-divider" aria-hidden="true">+----------------------------------------------------------------+</div>
+
+    <main class="container">
+        <section id="my-interests" class="my-interests" aria-label="My interests">
+            <h2 class="section-title">My interests</h2>
+            <div class="card-list">
+                <div class="card">
+                    <img src="mascot/card1.jpg" alt="A cute cactus mascot playing a traditional stringed instrument surrounded by Turkish Iznik ceramic floral motifs" class="card-image">
+                    <h2>Music</h2>
+                    <p>Playing traditional instruments and making music</p>
+                </div>
+                <div class="card">
+                    <img src="mascot/card2.jpg" alt="A fashionable cactus mascot wearing a patterned sunhat and sunglasses standing next to a mannequin displaying traditional fashion items" class="card-image">
+                    <h2>Fashion</h2>
+                    <p>Exploring traditional patterns and stylish designs</p>
+                </div>
+                <div class="card">
+                    <img src="mascot/card3.jpg" alt="A cute cactus mascot holding a paintbrush and painting a floral motif on an easel canvas with paint pots and a palette nearby" class="card-image">
+                    <h2>Painting</h2>
+                    <p>Creating ceramic art and traditional tile paintings</p>
+                </div>
+                <div class="card">
+                    <img src="mascot/card4.jpg" alt="A three-panel Iznik tile mural showing the cactus mascot walking a fashion show runway in traditional patterned outfits" class="card-image">
+                    <h2>Runway</h2>
+                    <p>Fashion runway show with traditional Iznik patterns</p>
+                </div>
+                <div class="card">
+                    <img src="mascot/card5.jpg" alt="A three-panel Iznik tile mural illustrating the cactus mascot discovering and joyfully playing a traditional stringed instrument" class="card-image">
+                    <h2>Story</h2>
+                    <p>A musical journey and joyful lute performance</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="ascii-divider" aria-hidden="true">+----------------------------------------------------------------+</div>
+
+    <footer>
+        <p>&copy; 2026 Web Ders</p>
+        <p class="ai-note"><small>The images on this site were made with AI.</small></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nisa Durdu | Personal Site</title>
+    <!-- Mascot as Tab Icon (Favicon) -->
+    <link rel="icon" type="image/jpeg" href="mascot/mascot.jpg">
+
+    <!-- Fonts: Syne & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Syne:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Fixed Top Navigation Menu -->
+    <header class="top-nav">
+        <nav class="nav-container" aria-label="Main Navigation">
+            <a href="#cover" class="nav-brand">Nisa<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#cover" class="nav-link">Cover</a></li>
+                <li><a href="#about" class="nav-link">About Me</a></li>
+                <li><a href="#interests" class="nav-link">My Interests</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. Cover Section (Full screen height with background image) -->
+        <section id="cover" class="section cover-section" aria-label="Cover Section">
+            <div class="cover-bg-container">
+                <img src="mascot/cover.jpg" alt="A panoramic Turkish Iznik ceramic tile mural featuring a smiling cactus mascot overlooking a landscape with traditional musicians playing instruments, artisans weaving carpets, and painters" class="cover-bg-image">
+                <div class="cover-overlay"></div>
+            </div>
+            <div class="section-container">
+                <h1 class="section-heading">Nisa <span class="highlight">Durdu</span></h1>
+                <p class="cover-intro">Welcome to my creative space blending art, design, and code into cinematic digital experiences.</p>
+            </div>
+            <!-- Section Transition Divider -->
+            <div class="section-transition-divider" aria-hidden="true"></div>
+        </section>
+
+        <!-- 2. About Me Section (Full screen height) -->
+        <section id="about" class="section about-section" aria-label="About Me Section">
+            <div class="section-container">
+                <div class="about-mascot-wrapper">
+                    <img src="mascot/mascot.jpg" alt="A smiling cactus mascot decorated with traditional Turkish Iznik blue and terracotta red floral tile motifs" class="mascot-image">
+                </div>
+                <div class="about-content">
+                    <h2 class="section-heading">About <span class="highlight">Me</span></h2>
+                    <p class="about-text">
+                        I am a digital creator who loves turning Turkish tile art traditions into lively, interactive web experiences while sipping copious amounts of Turkish coffee. My guiding philosophy is that code should feel just as handcrafted, vibrant, and fun as an intricate ceramic mural. When I am not designing pixels or writing clean algorithms, you can find me exploring quirky art projects alongside my cheerful cactus mascot.
+                    </p>
+                </div>
+            </div>
+            <!-- Section Transition Divider -->
+            <div class="section-transition-divider" aria-hidden="true"></div>
+        </section>
+
+        <!-- 3. My Interests Section (Full screen height, 3 cards) -->
+        <section id="interests" class="section interests-section" aria-label="My Interests Section">
+            <div class="section-container">
+                <h2 class="section-heading">My <span class="highlight">Interests</span></h2>
+                <div class="interests-grid">
+                    <!-- Card 1: Music (card-1) -->
+                    <article class="interest-card">
+                        <div class="card-image-box">
+                            <img src="mascot/card1.jpg" alt="A cute cactus mascot playing a traditional Turkish stringed instrument surrounded by Iznik ceramic floral motifs" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Music</h3>
+                            <p class="card-desc">Exploring melodic rhythms and traditional stringed instruments that inspire creative flow.</p>
+                        </div>
+                    </article>
+
+                    <!-- Card 2: Fashion (card-2) -->
+                    <article class="interest-card">
+                        <div class="card-image-box">
+                            <img src="mascot/card2.jpg" alt="A fashionable cactus mascot wearing a patterned sunhat and sunglasses standing beside a mannequin displaying traditional outfits" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Fashion</h3>
+                            <p class="card-desc">Appreciating contemporary style interwoven with timeless handcrafted textile motifs.</p>
+                        </div>
+                    </article>
+
+                    <!-- Card 3: Art (card-3) -->
+                    <article class="interest-card">
+                        <div class="card-image-box">
+                            <img src="mascot/card3.jpg" alt="A cactus mascot holding a paintbrush and painting an intricate floral motif on an easel canvas" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Art</h3>
+                            <p class="card-desc">Painting intricate ceramic patterns and experimenting with visual aesthetics and color palettes.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <!-- Section Transition Divider -->
+            <div class="section-transition-divider" aria-hidden="true"></div>
+        </section>
+
+        <!-- 4. Contact Section (Full screen height) -->
+        <section id="contact" class="section contact-section" aria-label="Contact Section">
+            <div class="section-container">
+                <h2 class="section-heading">Get in <span class="highlight">Touch</span></h2>
+                <p class="contact-text">Feel free to reach out for collaborations, creative projects, or just to say hello.</p>
+                <div class="contact-links">
+                    <a href="mailto:nisa.durdu2004@gmail.com" class="contact-btn">nisa.durdu2004@gmail.com</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Footer with Required AI Notice -->
+    <footer class="site-footer">
+        <p class="ai-notice">The images on this site were made with AI.</p>
+    </footer>
+
+    <!-- GSAP 3 and ScrollTrigger from jsDelivr CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <!-- Site Interaction Script -->
+    <script src="script.js"></script>
+</body>
+</html>
