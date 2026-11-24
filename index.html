@@ -25,16 +25,20 @@
                 <li><a href="#cover" class="nav-link">Cover</a></li>
                 <li><a href="#about" class="nav-link">About Me</a></li>
                 <li><a href="#interests" class="nav-link">My Interests</a></li>
+                <li><a href="#animations" class="nav-link">Animations</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- 1. Cover Section (Full screen height with background image) -->
+        <!-- 1. Cover Section (Full screen height with animated video background) -->
         <section id="cover" class="section cover-section" aria-label="Cover Section">
             <div class="cover-bg-container">
-                <img src="mascot/cover.jpg" alt="A panoramic Turkish Iznik ceramic tile mural featuring a smiling cactus mascot overlooking a landscape with traditional musicians playing instruments, artisans weaving carpets, and painters" class="cover-bg-image">
+                <video class="cover-bg-video" autoplay loop muted playsinline poster="mascot/cover.jpg" aria-label="Animated panoramic Turkish Iznik tile mural with cactus mascot">
+                    <source src="Camera_moving_forward_slowly_484ca645_1080p.mp4" type="video/mp4">
+                    <img src="mascot/cover.jpg" alt="A panoramic Turkish Iznik ceramic tile mural featuring a smiling cactus mascot overlooking a landscape with traditional musicians playing instruments, artisans weaving carpets, and painters" class="cover-bg-image">
+                </video>
                 <div class="cover-overlay"></div>
             </div>
             <div class="section-container">
@@ -105,7 +109,43 @@
             <div class="section-transition-divider" aria-hidden="true"></div>
         </section>
 
-        <!-- 4. Contact Section (Full screen height) -->
+        <!-- 4. Animations Section (Full screen height, 2 showcase videos) -->
+        <section id="animations" class="section animations-section" aria-label="Animations Section">
+            <div class="section-container">
+                <h2 class="section-heading">Cinematic <span class="highlight">Animations</span></h2>
+                <div class="videos-grid">
+                    <!-- Video 1: Mural Journey -->
+                    <article class="video-card">
+                        <div class="video-wrapper">
+                            <video controls loop muted playsinline poster="mascot/cover.jpg" class="showcase-video" aria-label="Camera moving forward slowly through the Turkish Iznik tile mural">
+                                <source src="Camera_moving_forward_slowly_484ca645_1080p.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Mural Journey</h3>
+                            <p class="card-desc">Camera gently gliding into the panoramic Turkish Iznik ceramic tile landscape.</p>
+                        </div>
+                    </article>
+
+                    <!-- Video 2: Fashion Runway -->
+                    <article class="video-card">
+                        <div class="video-wrapper">
+                            <video controls loop muted playsinline poster="mascot/card2.jpg" class="showcase-video" aria-label="Cactus mascot walking the fashion show runway in traditional patterned outfit">
+                                <source src="Görsel_sahneyi_doğal_hareketlendir_fc252f31_1080p.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Fashion Runway</h3>
+                            <p class="card-desc">The stylish cactus mascot walking the runway in traditional patterns under flashing cameras.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <!-- Section Transition Divider -->
+            <div class="section-transition-divider" aria-hidden="true"></div>
+        </section>
+
+        <!-- 5. Contact Section (Full screen height) -->
         <section id="contact" class="section contact-section" aria-label="Contact Section">
             <div class="section-container">
                 <h2 class="section-heading">Get in <span class="highlight">Touch</span></h2>
